@@ -8,8 +8,13 @@ import os
 import sys
 import json
 import subprocess
+import time
 from datetime import datetime
 from pathlib import Path
+
+# Load environment variables
+from dotenv import load_dotenv
+load_dotenv(Path(__file__).parent.parent / '.env')
 
 # Add scripts directory to path
 script_dir = Path(__file__).parent
@@ -26,16 +31,166 @@ class DigestOrchestrator:
         self.fetcher = NewsFetcher()
         self.generator = CommentaryGenerator()
         self.translator = DigestTranslator()
-        self.sender = EmailSender(recipient="johnyin@aisemble.ca")
+        self.sender = EmailSender(recipient=os.environ.get('RECIPIENT_EMAIL', 'johnyin@aisemble.ca'))
         self.log_file = self.work_dir / "digest_log.txt"
+        
+        # LLM configuration
+        self.gemini_key = os.environ.get('GEMINI_API_KEY')
+        self.kimi_key = os.environ.get('KIMI_API_KEY')
     
     def log(self, message):
         """Log message to file and console"""
         timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
         log_message = f"[{timestamp}] {message}"
         print(log_message)
-        with open(self.log_file, 'a') as f:
-            f.write(log_message + '\n')
+        try:
+            with open(self.log_file, 'a') as f:
+                f.write(log_message + '\n')
+        except:
+            pass
+    
+    def call_llm_for_commentary(self, prompts: dict) -> dict:
+        """Call LLM API to generate commentary (Gemini Flash with Kimi fallback)"""
+        commentaries = {}
+        
+        for exec_key, prompt in prompts.items():
+            self.log(f"Generating commentary for {exec_key}...")
+            
+            # Try Gemini Flash first (using REST API)
+            try:
+                import requests
+                url = f"https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash-exp:generateContent?key={self.gemini_key}"
+                headers = {"Content-Type": "application/json"}
+                payload = {
+                    "contents": [{"parts": [{"text": prompt}]}],
+                    "generationConfig": {"temperature": 0.7, "maxOutputTokens": 2048}
+                }
+                response = requests.post(url, headers=headers, json=payload, timeout=30)
+                if response.status_code == 200:
+                    data = response.json()
+                    commentaries[exec_key] = data['candidates'][0]['content']['parts'][0]['text']
+                    self.log(f"✓ {exec_key} commentary generated via Gemini Flash")
+                    time.sleep(0.5)  # Rate limiting
+                    continue
+                else:
+                    raise Exception(f"Gemini API returned {response.status_code}: {response.text}")
+            except Exception as e:
+                self.log(f"Gemini Flash failed for {exec_key}: {e}")
+            
+            # Fallback to Kimi K2.5
+            try:
+                import requests
+                headers = {
+                    "Authorization": f"Bearer {self.kimi_key}",
+                    "Content-Type": "application/json"
+                }
+                payload = {
+                    "model": "moonshot-v1-8k",
+                    "messages": [{"role": "user", "content": prompt}],
+                    "temperature": 0.7
+                }
+                response = requests.post(
+                    "https://api.moonshot.cn/v1/chat/completions",
+                    headers=headers,
+                    json=payload,
+                    timeout=30
+                )
+                if response.status_code == 200:
+                    data = response.json()
+                    commentaries[exec_key] = data['choices'][0]['message']['content']
+                    self.log(f"✓ {exec_key} commentary generated via Kimi K2.5")
+                    time.sleep(1)  # Rate limiting
+                else:
+                    raise Exception(f"Kimi API returned {response.status_code}")
+            except Exception as e:
+                self.log(f"Kimi fallback failed for {exec_key}: {e}")
+                # Use mock as last resort
+                commentaries[exec_key] = self.generator.create_mock_commentary({})[exec_key]
+                self.log(f"⚠ Using mock commentary for {exec_key}")
+        
+        return commentaries
+    
+    def call_llm_for_translation(self, content: dict) -> dict:
+        """Call LLM API to translate content to Simplified Chinese"""
+        self.log("Translating to Simplified Chinese...")
+        
+        # Prepare translation prompt
+        translation_request = {
+            "news": content["news"],
+            "commentary": content["commentary"]
+        }
+        
+        prompt = f"""Translate the following news digest to Simplified Chinese (简体中文).
+Maintain professional business terminology and keep the structure intact.
+
+Input:
+{json.dumps(translation_request, indent=2, ensure_ascii=False)}
+
+Output the translation in the same JSON structure, with all text translated to Simplified Chinese.
+Only output valid JSON, no explanation."""
+
+        # Try Gemini Flash first (using REST API)
+        try:
+            import requests
+            url = f"https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash-exp:generateContent?key={self.gemini_key}"
+            headers = {"Content-Type": "application/json"}
+            payload = {
+                "contents": [{"parts": [{"text": prompt}]}],
+                "generationConfig": {"temperature": 0.3, "maxOutputTokens": 4096}
+            }
+            response = requests.post(url, headers=headers, json=payload, timeout=60)
+            if response.status_code == 200:
+                data = response.json()
+                result_text = data['candidates'][0]['content']['parts'][0]['text'].strip()
+                # Extract JSON from response
+                if '```json' in result_text:
+                    result_text = result_text.split('```json')[1].split('```')[0].strip()
+                elif '```' in result_text:
+                    result_text = result_text.split('```')[1].split('```')[0].strip()
+                translated = json.loads(result_text)
+                self.log("✓ Translation completed via Gemini Flash")
+                return translated
+            else:
+                raise Exception(f"Gemini API returned {response.status_code}: {response.text}")
+        except Exception as e:
+            self.log(f"Gemini Flash translation failed: {e}")
+        
+        # Fallback to Kimi K2.5
+        try:
+            import requests
+            headers = {
+                "Authorization": f"Bearer {self.kimi_key}",
+                "Content-Type": "application/json"
+            }
+            payload = {
+                "model": "moonshot-v1-8k",
+                "messages": [{"role": "user", "content": prompt}],
+                "temperature": 0.3
+            }
+            response = requests.post(
+                "https://api.moonshot.cn/v1/chat/completions",
+                headers=headers,
+                json=payload,
+                timeout=30
+            )
+            if response.status_code == 200:
+                data = response.json()
+                result_text = data['choices'][0]['message']['content'].strip()
+                if '```json' in result_text:
+                    result_text = result_text.split('```json')[1].split('```')[0].strip()
+                elif '```' in result_text:
+                    result_text = result_text.split('```')[1].split('```')[0].strip()
+                translated = json.loads(result_text)
+                self.log("✓ Translation completed via Kimi K2.5")
+                return translated
+            else:
+                raise Exception(f"Kimi API returned {response.status_code}")
+        except Exception as e:
+            self.log(f"Kimi translation failed: {e}")
+        
+        # Use mock translation as last resort
+        self.log("⚠ Using mock translation")
+        return self.translator.create_mock_translation(content["news"], content["commentary"])
     
     def run(self):
         """Main execution flow"""
@@ -57,15 +212,8 @@ class DigestOrchestrator:
             
             # Step 2: Generate commentary
             self.log("Step 2: Generating executive commentary...")
-            
-            # In production, this would call an LLM API
-            # For now, using mock commentary
-            commentaries = self.generator.create_mock_commentary(news_digest)
-            
-            # TODO: Replace with actual LLM calls:
-            # prompts = self.generator.generate_all_commentary(news_digest)
-            # commentaries = self.call_llm_for_commentary(prompts)
-            
+            prompts = self.generator.generate_all_commentary(news_digest)
+            commentaries = self.call_llm_for_commentary(prompts)
             self.log("Generated commentary from all three executives")
             
             # Save commentary
@@ -76,18 +224,11 @@ class DigestOrchestrator:
             
             # Step 3: Translate to Chinese
             self.log("Step 3: Translating to Simplified Chinese...")
-            
-            # In production, this would call an LLM API for translation
-            # For now, using mock translation
-            translated = self.translator.create_mock_translation(news_digest, commentaries)
-            
-            # TODO: Replace with actual LLM translation:
-            # translation_prompts = {
-            #     "news": self.translator.translate_headlines(news_digest),
-            #     "commentary": self.translator.translate_commentary(commentaries)
-            # }
-            # translated = self.call_llm_for_translation(translation_prompts)
-            
+            english_content = {
+                "news": news_digest,
+                "commentary": commentaries
+            }
+            translated = self.call_llm_for_translation(english_content)
             self.log("Translation completed")
             
             # Save translation
@@ -98,11 +239,6 @@ class DigestOrchestrator:
             
             # Step 4: Format and send email
             self.log("Step 4: Formatting and sending email...")
-            
-            english_content = {
-                "news": news_digest,
-                "commentary": commentaries
-            }
             
             chinese_content = translated
             
@@ -131,36 +267,6 @@ class DigestOrchestrator:
             import traceback
             self.log(traceback.format_exc())
             return False
-    
-    def call_llm_for_commentary(self, prompts: dict) -> dict:
-        """
-        Call LLM API to generate commentary
-        This should be implemented with actual LLM API calls
-        """
-        # TODO: Implement with Claude API or similar
-        # Example:
-        # import anthropic
-        # client = anthropic.Anthropic(api_key=os.environ.get("ANTHROPIC_API_KEY"))
-        # 
-        # commentaries = {}
-        # for exec_key, prompt in prompts.items():
-        #     response = client.messages.create(
-        #         model="claude-sonnet-4",
-        #         max_tokens=1000,
-        #         messages=[{"role": "user", "content": prompt}]
-        #     )
-        #     commentaries[exec_key] = response.content[0].text
-        # 
-        # return commentaries
-        pass
-    
-    def call_llm_for_translation(self, prompts: dict) -> dict:
-        """
-        Call LLM API to translate content
-        This should be implemented with actual LLM API calls
-        """
-        # TODO: Implement with Claude API or similar
-        pass
 
 def main():
     """Main entry point"""
