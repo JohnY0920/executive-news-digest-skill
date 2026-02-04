@@ -273,13 +273,14 @@ class EmailSender:
             # Prepare email subject
             subject = f"📰 Executive News Digest - {datetime.now().strftime('%b %d, %Y')}"
             
-            # Send via GOG CLI
+            # Send via GOG CLI (using --body with HTML)
             # Note: This assumes GOG is configured and GOG_ACCOUNT is set
             cmd = [
                 "gog", "gmail", "send",
                 "--to", self.recipient,
                 "--subject", subject,
-                "--html-file", temp_html_file
+                "--body", html_body,
+                "--html"
             ]
             
             print(f"Sending email to {self.recipient}...")
@@ -290,7 +291,20 @@ class EmailSender:
                 return True
             else:
                 print(f"❌ Error sending email: {result.stderr}")
-                return False
+                # Try without --html flag
+                cmd = [
+                    "gog", "gmail", "send",
+                    "--to", self.recipient,
+                    "--subject", subject,
+                    "--body", html_body
+                ]
+                result = subprocess.run(cmd, capture_output=True, text=True)
+                if result.returncode == 0:
+                    print("✅ Email sent successfully (plain mode)!")
+                    return True
+                else:
+                    print(f"❌ Error sending email: {result.stderr}")
+                    return False
                 
         except Exception as e:
             print(f"❌ Error: {e}")
