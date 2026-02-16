@@ -1129,3 +1129,122 @@ AttributeError: 'SMTPEmailSender' object has no attribute 'save_html_preview'
 [2026-02-12 08:00:20] ============================================================
 [2026-02-12 08:00:20] Executive News Digest completed successfully!
 [2026-02-12 08:00:20] ============================================================
+[2026-02-16 08:01:04] ============================================================
+[2026-02-16 08:01:04] Starting Executive News Digest Generation
+[2026-02-16 08:01:04] ============================================================
+[2026-02-16 08:01:04] Step 1: Fetching news from sources...
+[2026-02-16 08:01:05] Fetched 20 headlines
+[2026-02-16 08:01:05] Saved raw news to news_digest_raw.json
+[2026-02-16 08:01:05] Step 2: Generating executive commentary...
+[2026-02-16 08:01:05] Generating commentary for ray_dalio...
+[2026-02-16 08:01:05] Gemini Flash failed for ray_dalio: Gemini API returned 400: {
+  "error": {
+    "code": 400,
+    "message": "API key not valid. Please pass a valid API key.",
+    "status": "INVALID_ARGUMENT",
+    "details": [
+      {
+        "@type": "type.googleapis.com/google.rpc.ErrorInfo",
+        "reason": "API_KEY_INVALID",
+        "domain": "googleapis.com",
+        "metadata": {
+          "service": "generativelanguage.googleapis.com"
+        }
+      },
+      {
+        "@type": "type.googleapis.com/google.rpc.LocalizedMessage",
+        "locale": "en-US",
+        "message": "API key not valid. Please pass a valid API key."
+      }
+    ]
+  }
+}
+
+[2026-02-16 08:01:07] Kimi fallback failed for ray_dalio: Kimi API returned 401
+[2026-02-16 08:01:07] ⚠ Using mock commentary for ray_dalio
+[2026-02-16 08:01:07] Generating commentary for elon_musk...
+[2026-02-16 08:01:07] Gemini Flash failed for elon_musk: Gemini API returned 400: {
+  "error": {
+    "code": 400,
+    "message": "API key not valid. Please pass a valid API key.",
+    "status": "INVALID_ARGUMENT",
+    "details": [
+      {
+        "@type": "type.googleapis.com/google.rpc.ErrorInfo",
+        "reason": "API_KEY_INVALID",
+        "domain": "googleapis.com",
+        "metadata": {
+          "service": "generativelanguage.googleapis.com"
+        }
+      },
+      {
+        "@type": "type.googleapis.com/google.rpc.LocalizedMessage",
+        "locale": "en-US",
+        "message": "API key not valid. Please pass a valid API key."
+      }
+    ]
+  }
+}
+
+[2026-02-16 08:01:08] Kimi fallback failed for elon_musk: Kimi API returned 401
+[2026-02-16 08:01:08] ⚠ Using mock commentary for elon_musk
+[2026-02-16 08:01:08] Generating commentary for warren_buffett...
+[2026-02-16 08:01:08] Gemini Flash failed for warren_buffett: Gemini API returned 400: {
+  "error": {
+    "code": 400,
+    "message": "API key not valid. Please pass a valid API key.",
+    "status": "INVALID_ARGUMENT",
+    "details": [
+      {
+        "@type": "type.googleapis.com/google.rpc.ErrorInfo",
+        "reason": "API_KEY_INVALID",
+        "domain": "googleapis.com",
+        "metadata": {
+          "service": "generativelanguage.googleapis.com"
+        }
+      },
+      {
+        "@type": "type.googleapis.com/google.rpc.LocalizedMessage",
+        "locale": "en-US",
+        "message": "API key not valid. Please pass a valid API key."
+      }
+    ]
+  }
+}
+
+[2026-02-16 08:01:09] Kimi fallback failed for warren_buffett: Kimi API returned 401
+[2026-02-16 08:01:09] ⚠ Using mock commentary for warren_buffett
+[2026-02-16 08:01:09] Generated commentary from all three executives
+[2026-02-16 08:01:09] Saved commentary to commentary_output.json
+[2026-02-16 08:01:09] Step 3: Translating to Simplified Chinese...
+[2026-02-16 08:01:09] Translating to Simplified Chinese...
+[2026-02-16 08:01:09] Gemini Flash translation failed: Gemini API returned 400: {
+  "error": {
+    "code": 400,
+    "message": "API key not valid. Please pass a valid API key.",
+    "status": "INVALID_ARGUMENT",
+    "details": [
+      {
+        "@type": "type.googleapis.com/google.rpc.ErrorInfo",
+        "reason": "API_KEY_INVALID",
+        "domain": "googleapis.com",
+        "metadata": {
+          "service": "generativelanguage.googleapis.com"
+        }
+      },
+      {
+        "@type": "type.googleapis.com/google.rpc.LocalizedMessage",
+        "locale": "en-US",
+        "message": "API key not valid. Please pass a valid API key."
+      }
+    ]
+  }
+}
+
+[2026-02-16 08:01:11] Kimi translation failed: Kimi API returned 401
+[2026-02-16 08:01:11] ⚠ Using mock translation
+[2026-02-16 08:01:11] Translation completed
+[2026-02-16 08:01:11] Saved translation to translated_digest.json
+[2026-02-16 08:01:11] Step 4: Formatting and sending email...
+[2026-02-16 08:01:11] Saved HTML preview to digest_preview.html
+[2026-02-16 08:01:11] ❌ Failed to send email
