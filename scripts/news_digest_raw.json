@@ -1,0 +1,130 @@
+{
+  "economics": [
+    {
+      "title": "Economics has failed on the climate crisis. This complexity scientist has a mind-blowing plan to fix that | Green economy | The Guardian",
+      "url": "https://www.theguardian.com/environment/2026/feb/12/economics-climate-crisis-complexity-scientist-plan",
+      "source": "theguardian.com",
+      "published": "5 hours ago"
+    },
+    {
+      "title": "UK economy grows by only 0.1% amid falling business investment | Economic growth (GDP) | The Guardian",
+      "url": "https://theguardian.com/business/2026/feb/12/uk-economy-grows-rachel-reeves-budget-ons-gdp-growth",
+      "source": "theguardian.com",
+      "published": "4 hours ago"
+    },
+    {
+      "title": "Burger King owner beats Q4 sales estimates | News.az",
+      "url": "https://news.az/news/burger-king-owner-beats-q4-sales-estimates",
+      "source": "news.az",
+      "published": "1 hour ago"
+    },
+    {
+      "title": "UK economy limps along at 0.1% growth \u2013 but there are reasons for optimism in 2026 | Economic growth (GDP) | The Guardian",
+      "url": "https://theguardian.com/business/2026/feb/12/uk-economy-gdp-reasons-for-optimism-analysis",
+      "source": "theguardian.com",
+      "published": "4 hours ago"
+    },
+    {
+      "title": "UK economy grew by 0.1% in last three months of 2025 after 'subdued' end to year - BBC News",
+      "url": "https://bbc.com/news/live/cy4wg0y0j02t",
+      "source": "bbc.com",
+      "published": "7 hours ago"
+    }
+  ],
+  "world_news": [
+    {
+      "title": "G7 Summit Addresses Climate and Security Concerns",
+      "url": "https://example.com/news/0",
+      "source": "Mock News Source",
+      "published": "1 hour ago"
+    },
+    {
+      "title": "Middle East Peace Talks Show Progress",
+      "url": "https://example.com/news/1",
+      "source": "Mock News Source",
+      "published": "1 hour ago"
+    },
+    {
+      "title": "Asian Nations Strengthen Trade Partnerships",
+      "url": "https://example.com/news/2",
+      "source": "Mock News Source",
+      "published": "1 hour ago"
+    },
+    {
+      "title": "UN Report Highlights Global Development Goals",
+      "url": "https://example.com/news/3",
+      "source": "Mock News Source",
+      "published": "1 hour ago"
+    },
+    {
+      "title": "International Response to Humanitarian Crisis Gains Momentum",
+      "url": "https://example.com/news/4",
+      "source": "Mock News Source",
+      "published": "1 hour ago"
+    }
+  ],
+  "business": [
+    {
+      "title": "Tech Giants Report Strong Q4 Earnings",
+      "url": "https://example.com/news/0",
+      "source": "Mock News Source",
+      "published": "1 hour ago"
+    },
+    {
+      "title": "Major Merger Announced in Automotive Sector",
+      "url": "https://example.com/news/1",
+      "source": "Mock News Source",
+      "published": "1 hour ago"
+    },
+    {
+      "title": "Retail Sales Data Exceeds Analyst Projections",
+      "url": "https://example.com/news/2",
+      "source": "Mock News Source",
+      "published": "1 hour ago"
+    },
+    {
+      "title": "Energy Companies Pivot Toward Renewable Investments",
+      "url": "https://example.com/news/3",
+      "source": "Mock News Source",
+      "published": "1 hour ago"
+    },
+    {
+      "title": "Startup Unicorns Continue to Emerge in AI Space",
+      "url": "https://example.com/news/4",
+      "source": "Mock News Source",
+      "published": "1 hour ago"
+    }
+  ],
+  "ai_technology": [
+    {
+      "title": "Mock headline for: artificial intelligence (1)",
+      "url": "https://example.com/news/0",
+      "source": "Mock Source",
+      "published": "1 hour ago"
+    },
+    {
+      "title": "Mock headline for: artificial intelligence (2)",
+      "url": "https://example.com/news/1",
+      "source": "Mock Source",
+      "published": "1 hour ago"
+    },
+    {
+      "title": "Mock headline for: artificial intelligence (3)",
+      "url": "https://example.com/news/2",
+      "source": "Mock Source",
+      "published": "1 hour ago"
+    },
+    {
+      "title": "Mock headline for: artificial intelligence (4)",
+      "url": "https://example.com/news/3",
+      "source": "Mock Source",
+      "published": "1 hour ago"
+    },
+    {
+      "title": "Mock headline for: artificial intelligence (5)",
+      "url": "https://example.com/news/4",
+      "source": "Mock Source",
+      "published": "1 hour ago"
+    }
+  ]
+}

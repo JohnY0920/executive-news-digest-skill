@@ -1,0 +1,1131 @@
+[2026-02-03 22:44:03] ============================================================
+[2026-02-03 22:44:03] Starting Executive News Digest Generation
+[2026-02-03 22:44:03] ============================================================
+[2026-02-03 22:44:03] Step 1: Fetching news from sources...
+[2026-02-03 22:44:03] Fetched 20 headlines
+[2026-02-03 22:44:03] Saved raw news to news_digest_raw.json
+[2026-02-03 22:44:03] Step 2: Generating executive commentary...
+[2026-02-03 22:44:03] Generating commentary for ray_dalio...
+[2026-02-03 22:44:03] Gemini Flash failed for ray_dalio: Gemini API returned 404: {
+  "error": {
+    "code": 404,
+    "message": "models/gemini-2.0-flash-exp is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.",
+    "status": "NOT_FOUND"
+  }
+}
+
+[2026-02-03 22:44:06] Kimi fallback failed for ray_dalio: Kimi API returned 401
+[2026-02-03 22:44:06] ⚠ Using mock commentary for ray_dalio
+[2026-02-03 22:44:06] Generating commentary for elon_musk...
+[2026-02-03 22:44:06] Gemini Flash failed for elon_musk: Gemini API returned 404: {
+  "error": {
+    "code": 404,
+    "message": "models/gemini-2.0-flash-exp is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.",
+    "status": "NOT_FOUND"
+  }
+}
+
+[2026-02-03 22:44:07] Kimi fallback failed for elon_musk: Kimi API returned 401
+[2026-02-03 22:44:07] ⚠ Using mock commentary for elon_musk
+[2026-02-03 22:44:07] Generating commentary for warren_buffett...
+[2026-02-03 22:44:07] Gemini Flash failed for warren_buffett: Gemini API returned 404: {
+  "error": {
+    "code": 404,
+    "message": "models/gemini-2.0-flash-exp is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.",
+    "status": "NOT_FOUND"
+  }
+}
+
+[2026-02-03 22:44:09] Kimi fallback failed for warren_buffett: Kimi API returned 401
+[2026-02-03 22:44:09] ⚠ Using mock commentary for warren_buffett
+[2026-02-03 22:44:09] Generated commentary from all three executives
+[2026-02-03 22:44:09] Saved commentary to commentary_output.json
+[2026-02-03 22:44:09] Step 3: Translating to Simplified Chinese...
+[2026-02-03 22:44:09] Translating to Simplified Chinese...
+[2026-02-03 22:44:09] Gemini Flash translation failed: Gemini API returned 404: {
+  "error": {
+    "code": 404,
+    "message": "models/gemini-2.0-flash-exp is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.",
+    "status": "NOT_FOUND"
+  }
+}
+
+[2026-02-03 22:44:11] Kimi translation failed: Kimi API returned 401
+[2026-02-03 22:44:11] ⚠ Using mock translation
+[2026-02-03 22:44:11] Translation completed
+[2026-02-03 22:44:11] Saved translation to translated_digest.json
+[2026-02-03 22:44:11] Step 4: Formatting and sending email...
+[2026-02-03 22:44:11] Saved HTML preview to digest_preview.html
+[2026-02-03 22:44:12] ❌ Failed to send email
+[2026-02-06 12:27:03] ============================================================
+[2026-02-06 12:27:03] Starting Executive News Digest Generation
+[2026-02-06 12:27:03] ============================================================
+[2026-02-06 12:27:03] Step 1: Fetching news from sources...
+[2026-02-06 12:27:03] Fetched 20 headlines
+[2026-02-06 12:27:03] Saved raw news to news_digest_raw.json
+[2026-02-06 12:27:03] Step 2: Generating executive commentary...
+[2026-02-06 12:27:03] Generating commentary for ray_dalio...
+[2026-02-06 12:27:03] Gemini Flash failed for ray_dalio: Gemini API returned 404: {
+  "error": {
+    "code": 404,
+    "message": "models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.",
+    "status": "NOT_FOUND"
+  }
+}
+
+[2026-02-06 12:27:05] Kimi fallback failed for ray_dalio: Kimi API returned 401
+[2026-02-06 12:27:05] ⚠ Using mock commentary for ray_dalio
+[2026-02-06 12:27:05] Generating commentary for elon_musk...
+[2026-02-06 12:27:05] Gemini Flash failed for elon_musk: Gemini API returned 404: {
+  "error": {
+    "code": 404,
+    "message": "models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.",
+    "status": "NOT_FOUND"
+  }
+}
+
+[2026-02-06 12:27:06] Kimi fallback failed for elon_musk: Kimi API returned 401
+[2026-02-06 12:27:06] ⚠ Using mock commentary for elon_musk
+[2026-02-06 12:27:06] Generating commentary for warren_buffett...
+[2026-02-06 12:27:06] Gemini Flash failed for warren_buffett: Gemini API returned 404: {
+  "error": {
+    "code": 404,
+    "message": "models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.",
+    "status": "NOT_FOUND"
+  }
+}
+
+[2026-02-06 12:27:07] Kimi fallback failed for warren_buffett: Kimi API returned 401
+[2026-02-06 12:27:07] ⚠ Using mock commentary for warren_buffett
+[2026-02-06 12:27:07] Generated commentary from all three executives
+[2026-02-06 12:27:07] Saved commentary to commentary_output.json
+[2026-02-06 12:27:07] Step 3: Translating to Simplified Chinese...
+[2026-02-06 12:27:07] Translating to Simplified Chinese...
+[2026-02-06 12:27:07] Gemini Flash translation failed: Gemini API returned 404: {
+  "error": {
+    "code": 404,
+    "message": "models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.",
+    "status": "NOT_FOUND"
+  }
+}
+
+[2026-02-06 12:27:09] Kimi translation failed: Kimi API returned 401
+[2026-02-06 12:27:09] ⚠ Using mock translation
+[2026-02-06 12:27:09] Translation completed
+[2026-02-06 12:27:09] Saved translation to translated_digest.json
+[2026-02-06 12:27:09] Step 4: Formatting and sending email...
+[2026-02-06 12:27:09] Saved HTML preview to digest_preview.html
+[2026-02-06 12:27:09] ❌ Failed to send email
+[2026-02-06 17:42:41] ============================================================
+[2026-02-06 17:42:41] Starting Executive News Digest Generation
+[2026-02-06 17:42:41] ============================================================
+[2026-02-06 17:42:41] Step 1: Fetching news from sources...
+[2026-02-06 17:42:42] Fetched 20 headlines
+[2026-02-06 17:42:42] Saved raw news to news_digest_raw.json
+[2026-02-06 17:42:42] Step 2: Generating executive commentary...
+[2026-02-06 17:42:42] Generating commentary for ray_dalio...
+[2026-02-06 17:42:42] Gemini Flash failed for ray_dalio: Gemini API returned 404: {
+  "error": {
+    "code": 404,
+    "message": "models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.",
+    "status": "NOT_FOUND"
+  }
+}
+
+[2026-02-06 17:42:44] Kimi fallback failed for ray_dalio: Kimi API returned 401
+[2026-02-06 17:42:44] ⚠ Using mock commentary for ray_dalio
+[2026-02-06 17:42:44] Generating commentary for elon_musk...
+[2026-02-06 17:42:44] Gemini Flash failed for elon_musk: Gemini API returned 404: {
+  "error": {
+    "code": 404,
+    "message": "models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.",
+    "status": "NOT_FOUND"
+  }
+}
+
+[2026-02-06 17:42:45] Kimi fallback failed for elon_musk: Kimi API returned 401
+[2026-02-06 17:42:45] ⚠ Using mock commentary for elon_musk
+[2026-02-06 17:42:45] Generating commentary for warren_buffett...
+[2026-02-06 17:42:45] Gemini Flash failed for warren_buffett: Gemini API returned 404: {
+  "error": {
+    "code": 404,
+    "message": "models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.",
+    "status": "NOT_FOUND"
+  }
+}
+
+[2026-02-06 17:42:46] Kimi fallback failed for warren_buffett: Kimi API returned 401
+[2026-02-06 17:42:46] ⚠ Using mock commentary for warren_buffett
+[2026-02-06 17:42:46] Generated commentary from all three executives
+[2026-02-06 17:42:46] Saved commentary to commentary_output.json
+[2026-02-06 17:42:46] Step 3: Translating to Simplified Chinese...
+[2026-02-06 17:42:46] Translating to Simplified Chinese...
+[2026-02-06 17:42:46] Gemini Flash translation failed: Gemini API returned 404: {
+  "error": {
+    "code": 404,
+    "message": "models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.",
+    "status": "NOT_FOUND"
+  }
+}
+
+[2026-02-06 17:42:48] Kimi translation failed: Kimi API returned 401
+[2026-02-06 17:42:48] ⚠ Using mock translation
+[2026-02-06 17:42:48] Translation completed
+[2026-02-06 17:42:48] Saved translation to translated_digest.json
+[2026-02-06 17:42:48] Step 4: Formatting and sending email...
+[2026-02-06 17:42:48] Saved HTML preview to digest_preview.html
+[2026-02-06 17:42:48] ❌ Failed to send email
+[2026-02-06 18:43:01] ============================================================
+[2026-02-06 18:43:01] Starting Executive News Digest Generation
+[2026-02-06 18:43:01] ============================================================
+[2026-02-06 18:43:01] Step 1: Fetching news from sources...
+[2026-02-06 18:43:01] Fetched 20 headlines
+[2026-02-06 18:43:01] Saved raw news to news_digest_raw.json
+[2026-02-06 18:43:01] Step 2: Generating executive commentary...
+[2026-02-06 18:43:01] Generating commentary for ray_dalio...
+[2026-02-06 18:43:01] Gemini Flash failed for ray_dalio: Gemini API returned 400: {
+  "error": {
+    "code": 400,
+    "message": "API key not valid. Please pass a valid API key.",
+    "status": "INVALID_ARGUMENT",
+    "details": [
+      {
+        "@type": "type.googleapis.com/google.rpc.ErrorInfo",
+        "reason": "API_KEY_INVALID",
+        "domain": "googleapis.com",
+        "metadata": {
+          "service": "generativelanguage.googleapis.com"
+        }
+      },
+      {
+        "@type": "type.googleapis.com/google.rpc.LocalizedMessage",
+        "locale": "en-US",
+        "message": "API key not valid. Please pass a valid API key."
+      }
+    ]
+  }
+}
+
+[2026-02-06 18:43:03] Kimi fallback failed for ray_dalio: Kimi API returned 401
+[2026-02-06 18:43:03] ⚠ Using mock commentary for ray_dalio
+[2026-02-06 18:43:03] Generating commentary for elon_musk...
+[2026-02-06 18:43:03] Gemini Flash failed for elon_musk: Gemini API returned 400: {
+  "error": {
+    "code": 400,
+    "message": "API key not valid. Please pass a valid API key.",
+    "status": "INVALID_ARGUMENT",
+    "details": [
+      {
+        "@type": "type.googleapis.com/google.rpc.ErrorInfo",
+        "reason": "API_KEY_INVALID",
+        "domain": "googleapis.com",
+        "metadata": {
+          "service": "generativelanguage.googleapis.com"
+        }
+      },
+      {
+        "@type": "type.googleapis.com/google.rpc.LocalizedMessage",
+        "locale": "en-US",
+        "message": "API key not valid. Please pass a valid API key."
+      }
+    ]
+  }
+}
+
+[2026-02-06 18:43:04] Kimi fallback failed for elon_musk: Kimi API returned 401
+[2026-02-06 18:43:04] ⚠ Using mock commentary for elon_musk
+[2026-02-06 18:43:04] Generating commentary for warren_buffett...
+[2026-02-06 18:43:04] Gemini Flash failed for warren_buffett: Gemini API returned 400: {
+  "error": {
+    "code": 400,
+    "message": "API key not valid. Please pass a valid API key.",
+    "status": "INVALID_ARGUMENT",
+    "details": [
+      {
+        "@type": "type.googleapis.com/google.rpc.ErrorInfo",
+        "reason": "API_KEY_INVALID",
+        "domain": "googleapis.com",
+        "metadata": {
+          "service": "generativelanguage.googleapis.com"
+        }
+      },
+      {
+        "@type": "type.googleapis.com/google.rpc.LocalizedMessage",
+        "locale": "en-US",
+        "message": "API key not valid. Please pass a valid API key."
+      }
+    ]
+  }
+}
+
+[2026-02-06 18:43:06] Kimi fallback failed for warren_buffett: Kimi API returned 401
+[2026-02-06 18:43:06] ⚠ Using mock commentary for warren_buffett
+[2026-02-06 18:43:06] Generated commentary from all three executives
+[2026-02-06 18:43:06] Saved commentary to commentary_output.json
+[2026-02-06 18:43:06] Step 3: Translating to Simplified Chinese...
+[2026-02-06 18:43:06] Translating to Simplified Chinese...
+[2026-02-06 18:43:06] Gemini Flash translation failed: Gemini API returned 400: {
+  "error": {
+    "code": 400,
+    "message": "API key not valid. Please pass a valid API key.",
+    "status": "INVALID_ARGUMENT",
+    "details": [
+      {
+        "@type": "type.googleapis.com/google.rpc.ErrorInfo",
+        "reason": "API_KEY_INVALID",
+        "domain": "googleapis.com",
+        "metadata": {
+          "service": "generativelanguage.googleapis.com"
+        }
+      },
+      {
+        "@type": "type.googleapis.com/google.rpc.LocalizedMessage",
+        "locale": "en-US",
+        "message": "API key not valid. Please pass a valid API key."
+      }
+    ]
+  }
+}
+
+[2026-02-06 18:43:08] Kimi translation failed: Kimi API returned 401
+[2026-02-06 18:43:08] ⚠ Using mock translation
+[2026-02-06 18:43:08] Translation completed
+[2026-02-06 18:43:08] Saved translation to translated_digest.json
+[2026-02-06 18:43:08] Step 4: Formatting and sending email...
+[2026-02-06 18:43:08] Saved HTML preview to digest_preview.html
+[2026-02-06 18:43:08] ❌ Failed to send email
+[2026-02-08 11:18:34] ============================================================
+[2026-02-08 11:18:34] Starting Executive News Digest Generation
+[2026-02-08 11:18:34] ============================================================
+[2026-02-08 11:18:34] Step 1: Fetching news from sources...
+[2026-02-08 11:18:34] Fetched 20 headlines
+[2026-02-08 11:18:34] Saved raw news to news_digest_raw.json
+[2026-02-08 11:18:34] Step 2: Generating executive commentary...
+[2026-02-08 11:18:34] Generating commentary for ray_dalio...
+[2026-02-08 11:18:47] ✓ ray_dalio commentary generated via Gemini Flash
+[2026-02-08 11:18:47] Generating commentary for elon_musk...
+[2026-02-08 11:18:58] ✓ elon_musk commentary generated via Gemini Flash
+[2026-02-08 11:18:58] Generating commentary for warren_buffett...
+[2026-02-08 11:19:03] ============================================================
+[2026-02-08 11:19:03] Starting Executive News Digest Generation
+[2026-02-08 11:19:03] ============================================================
+[2026-02-08 11:19:03] Step 1: Fetching news from sources...
+[2026-02-08 11:19:03] Fetched 20 headlines
+[2026-02-08 11:19:03] Saved raw news to news_digest_raw.json
+[2026-02-08 11:19:03] Step 2: Generating executive commentary...
+[2026-02-08 11:19:03] Generating commentary for ray_dalio...
+[2026-02-08 11:19:10] ✓ warren_buffett commentary generated via Gemini Flash
+[2026-02-08 11:19:11] Generated commentary from all three executives
+[2026-02-08 11:19:11] Saved commentary to commentary_output.json
+[2026-02-08 11:19:11] Step 3: Translating to Simplified Chinese...
+[2026-02-08 11:19:11] Translating to Simplified Chinese...
+[2026-02-08 11:19:15] ✓ ray_dalio commentary generated via Gemini Flash
+[2026-02-08 11:19:15] Generating commentary for elon_musk...
+[2026-02-08 11:19:28] Gemini Flash failed for elon_musk: Gemini API returned 503: {
+  "error": {
+    "code": 503,
+    "message": "The model is overloaded. Please try again later.",
+    "status": "UNAVAILABLE"
+  }
+}
+
+[2026-02-08 11:19:29] Kimi fallback failed for elon_musk: Kimi API returned 401
+[2026-02-08 11:19:29] ⚠ Using mock commentary for elon_musk
+[2026-02-08 11:19:29] Generating commentary for warren_buffett...
+[2026-02-08 11:19:29] Gemini Flash failed for warren_buffett: Gemini API returned 429: {
+  "error": {
+    "code": 429,
+    "message": "You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 5, model: gemini-3-flash\nPlease retry in 29.892828375s.",
+    "status": "RESOURCE_EXHAUSTED",
+    "details": [
+      {
+        "@type": "type.googleapis.com/google.rpc.Help",
+        "links": [
+          {
+            "description": "Learn more about Gemini API quotas",
+            "url": "https://ai.google.dev/gemini-api/docs/rate-limits"
+          }
+        ]
+      },
+      {
+        "@type": "type.googleapis.com/google.rpc.QuotaFailure",
+        "violations": [
+          {
+            "quotaMetric": "generativelanguage.googleapis.com/generate_content_free_tier_requests",
+            "quotaId": "GenerateRequestsPerMinutePerProjectPerModel-FreeTier",
+            "quotaDimensions": {
+              "location": "global",
+              "model": "gemini-3-flash"
+            },
+            "quotaValue": "5"
+          }
+        ]
+      },
+      {
+        "@type": "type.googleapis.com/google.rpc.RetryInfo",
+        "retryDelay": "29s"
+      }
+    ]
+  }
+}
+
+[2026-02-08 11:19:31] Kimi fallback failed for warren_buffett: Kimi API returned 401
+[2026-02-08 11:19:31] ⚠ Using mock commentary for warren_buffett
+[2026-02-08 11:19:31] Generated commentary from all three executives
+[2026-02-08 11:19:31] Saved commentary to commentary_output.json
+[2026-02-08 11:19:31] Step 3: Translating to Simplified Chinese...
+[2026-02-08 11:19:31] Translating to Simplified Chinese...
+[2026-02-08 11:19:31] Gemini Flash translation failed: Gemini API returned 429: {
+  "error": {
+    "code": 429,
+    "message": "You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 5, model: gemini-3-flash\nPlease retry in 28.659978078s.",
+    "status": "RESOURCE_EXHAUSTED",
+    "details": [
+      {
+        "@type": "type.googleapis.com/google.rpc.Help",
+        "links": [
+          {
+            "description": "Learn more about Gemini API quotas",
+            "url": "https://ai.google.dev/gemini-api/docs/rate-limits"
+          }
+        ]
+      },
+      {
+        "@type": "type.googleapis.com/google.rpc.QuotaFailure",
+        "violations": [
+          {
+            "quotaMetric": "generativelanguage.googleapis.com/generate_content_free_tier_requests",
+            "quotaId": "GenerateRequestsPerMinutePerProjectPerModel-FreeTier",
+            "quotaDimensions": {
+              "model": "gemini-3-flash",
+              "location": "global"
+            },
+            "quotaValue": "5"
+          }
+        ]
+      },
+      {
+        "@type": "type.googleapis.com/google.rpc.RetryInfo",
+        "retryDelay": "28s"
+      }
+    ]
+  }
+}
+
+[2026-02-08 11:19:33] Kimi translation failed: Kimi API returned 401
+[2026-02-08 11:19:33] ⚠ Using mock translation
+[2026-02-08 11:19:33] Translation completed
+[2026-02-08 11:19:33] Saved translation to translated_digest.json
+[2026-02-08 11:19:33] Step 4: Formatting and sending email...
+[2026-02-08 11:19:33] Saved HTML preview to digest_preview.html
+[2026-02-08 11:19:33] ❌ Failed to send email
+[2026-02-08 11:19:38] Gemini Flash translation failed: Unterminated string starting at: line 135 column 23 (char 4924)
+[2026-02-08 11:19:40] Kimi translation failed: Kimi API returned 401
+[2026-02-08 11:19:40] ⚠ Using mock translation
+[2026-02-08 11:19:40] Translation completed
+[2026-02-08 11:19:40] Saved translation to translated_digest.json
+[2026-02-08 11:19:40] Step 4: Formatting and sending email...
+[2026-02-08 11:19:40] Saved HTML preview to digest_preview.html
+[2026-02-08 11:19:40] ❌ Failed to send email
+[2026-02-08 23:14:14] ============================================================
+[2026-02-08 23:14:14] Starting Executive News Digest Generation
+[2026-02-08 23:14:14] ============================================================
+[2026-02-08 23:14:14] Step 1: Fetching news from sources...
+[2026-02-08 23:14:15] Fetched 18 headlines
+[2026-02-08 23:14:15] Saved raw news to news_digest_raw.json
+[2026-02-08 23:14:15] Step 2: Generating executive commentary...
+[2026-02-08 23:14:15] Generating commentary for ray_dalio...
+[2026-02-08 23:14:25] ✓ ray_dalio commentary generated via Gemini Flash
+[2026-02-08 23:14:26] Generating commentary for elon_musk...
+[2026-02-08 23:14:39] Gemini Flash failed for elon_musk: Gemini API returned 503: {
+  "error": {
+    "code": 503,
+    "message": "The model is overloaded. Please try again later.",
+    "status": "UNAVAILABLE"
+  }
+}
+
+[2026-02-08 23:14:41] Kimi fallback failed for elon_musk: Kimi API returned 401
+[2026-02-08 23:14:41] ⚠ Using mock commentary for elon_musk
+[2026-02-08 23:14:41] Generating commentary for warren_buffett...
+[2026-02-08 23:14:42] Gemini Flash failed for warren_buffett: Gemini API returned 503: {
+  "error": {
+    "code": 503,
+    "message": "The model is overloaded. Please try again later.",
+    "status": "UNAVAILABLE"
+  }
+}
+
+[2026-02-08 23:14:44] Kimi fallback failed for warren_buffett: Kimi API returned 401
+[2026-02-08 23:14:44] ⚠ Using mock commentary for warren_buffett
+[2026-02-08 23:14:44] Generated commentary from all three executives
+[2026-02-08 23:14:44] Saved commentary to commentary_output.json
+[2026-02-08 23:14:44] Step 3: Translating to Simplified Chinese...
+[2026-02-08 23:14:44] Translating to Simplified Chinese...
+[2026-02-08 23:15:17] ✓ Translation completed via Gemini Flash
+[2026-02-08 23:15:17] Translation completed
+[2026-02-08 23:15:17] Saved translation to translated_digest.json
+[2026-02-08 23:15:17] Step 4: Formatting and sending email...
+[2026-02-08 23:15:17] Saved HTML preview to digest_preview.html
+[2026-02-08 23:15:17] ❌ Failed to send email
+[2026-02-08 23:19:07] ============================================================
+[2026-02-08 23:19:07] Starting Executive News Digest Generation
+[2026-02-08 23:19:07] ============================================================
+[2026-02-08 23:19:07] Step 1: Fetching news from sources...
+[2026-02-08 23:19:08] Fetched 18 headlines
+[2026-02-08 23:19:08] Saved raw news to news_digest_raw.json
+[2026-02-08 23:19:08] Step 2: Generating executive commentary...
+[2026-02-08 23:19:08] Generating commentary for ray_dalio...
+[2026-02-08 23:19:28] ✓ ray_dalio commentary generated via Gemini Flash
+[2026-02-08 23:19:29] Generating commentary for elon_musk...
+[2026-02-08 23:19:37] ✓ elon_musk commentary generated via Gemini Flash
+[2026-02-08 23:19:38] Generating commentary for warren_buffett...
+[2026-02-08 23:19:47] ✓ warren_buffett commentary generated via Gemini Flash
+[2026-02-08 23:19:47] Generated commentary from all three executives
+[2026-02-08 23:19:47] Saved commentary to commentary_output.json
+[2026-02-08 23:19:47] Step 3: Translating to Simplified Chinese...
+[2026-02-08 23:19:47] Translating to Simplified Chinese...
+[2026-02-08 23:20:11] ✓ Translation completed via Gemini Flash
+[2026-02-08 23:20:11] Translation completed
+[2026-02-08 23:20:11] Saved translation to translated_digest.json
+[2026-02-08 23:20:11] Step 4: Formatting and sending email...
+[2026-02-08 23:20:11] Saved HTML preview to digest_preview.html
+[2026-02-08 23:20:11] ❌ Failed to send email
+[2026-02-09 08:51:42] ============================================================
+[2026-02-09 08:51:42] Starting Executive News Digest Generation
+[2026-02-09 08:51:42] ============================================================
+[2026-02-09 08:51:42] Step 1: Fetching news from sources...
+[2026-02-09 08:51:43] Fetched 18 headlines
+[2026-02-09 08:51:43] Saved raw news to news_digest_raw.json
+[2026-02-09 08:51:43] Step 2: Generating executive commentary...
+[2026-02-09 08:51:43] Generating commentary for ray_dalio...
+[2026-02-09 08:51:46] Gemini Flash failed for ray_dalio: Gemini API returned 503: {
+  "error": {
+    "code": 503,
+    "message": "This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.",
+    "status": "UNAVAILABLE"
+  }
+}
+
+[2026-02-09 08:51:48] Kimi fallback failed for ray_dalio: Kimi API returned 401
+[2026-02-09 08:51:48] ⚠ Using mock commentary for ray_dalio
+[2026-02-09 08:51:48] Generating commentary for elon_musk...
+[2026-02-09 08:52:05] Gemini Flash failed for elon_musk: Gemini API returned 503: {
+  "error": {
+    "code": 503,
+    "message": "This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.",
+    "status": "UNAVAILABLE"
+  }
+}
+
+[2026-02-09 08:52:07] Kimi fallback failed for elon_musk: Kimi API returned 401
+[2026-02-09 08:52:07] ⚠ Using mock commentary for elon_musk
+[2026-02-09 08:52:07] Generating commentary for warren_buffett...
+[2026-02-09 08:52:16] Gemini Flash failed for warren_buffett: Gemini API returned 503: {
+  "error": {
+    "code": 503,
+    "message": "This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.",
+    "status": "UNAVAILABLE"
+  }
+}
+
+[2026-02-09 08:52:17] Kimi fallback failed for warren_buffett: Kimi API returned 401
+[2026-02-09 08:52:17] ⚠ Using mock commentary for warren_buffett
+[2026-02-09 08:52:17] Generated commentary from all three executives
+[2026-02-09 08:52:17] Saved commentary to commentary_output.json
+[2026-02-09 08:52:17] Step 3: Translating to Simplified Chinese...
+[2026-02-09 08:52:17] Translating to Simplified Chinese...
+[2026-02-09 08:52:34] ✓ Translation completed via Gemini Flash
+[2026-02-09 08:52:34] Translation completed
+[2026-02-09 08:52:34] Saved translation to translated_digest.json
+[2026-02-09 08:52:34] Step 4: Formatting and sending email...
+[2026-02-09 08:52:34] Saved HTML preview to digest_preview.html
+[2026-02-09 08:52:34] ❌ Failed to send email
+[2026-02-09 08:54:56] ============================================================
+[2026-02-09 08:54:56] Starting Executive News Digest Generation
+[2026-02-09 08:54:56] ============================================================
+[2026-02-09 08:54:56] Step 1: Fetching news from sources...
+[2026-02-09 08:54:57] Fetched 18 headlines
+[2026-02-09 08:54:57] Saved raw news to news_digest_raw.json
+[2026-02-09 08:54:57] Step 2: Generating executive commentary...
+[2026-02-09 08:54:57] Generating commentary for ray_dalio...
+[2026-02-09 08:55:23] ✓ ray_dalio commentary generated via Gemini Flash
+[2026-02-09 08:55:23] Generating commentary for elon_musk...
+[2026-02-09 08:55:46] Gemini Flash failed for elon_musk: Gemini API returned 503: {
+  "error": {
+    "code": 503,
+    "message": "This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.",
+    "status": "UNAVAILABLE"
+  }
+}
+
+[2026-02-09 08:55:48] Kimi fallback failed for elon_musk: Kimi API returned 401
+[2026-02-09 08:55:48] ⚠ Using mock commentary for elon_musk
+[2026-02-09 08:55:48] Generating commentary for warren_buffett...
+[2026-02-09 08:55:50] Gemini Flash failed for warren_buffett: Gemini API returned 503: {
+  "error": {
+    "code": 503,
+    "message": "This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.",
+    "status": "UNAVAILABLE"
+  }
+}
+
+[2026-02-09 08:55:51] Kimi fallback failed for warren_buffett: Kimi API returned 401
+[2026-02-09 08:55:51] ⚠ Using mock commentary for warren_buffett
+[2026-02-09 08:55:51] Generated commentary from all three executives
+[2026-02-09 08:55:51] Saved commentary to commentary_output.json
+[2026-02-09 08:55:51] Step 3: Translating to Simplified Chinese...
+[2026-02-09 08:55:51] Translating to Simplified Chinese...
+[2026-02-09 08:55:58] Gemini Flash translation failed: Gemini API returned 503: {
+  "error": {
+    "code": 503,
+    "message": "This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.",
+    "status": "UNAVAILABLE"
+  }
+}
+
+[2026-02-09 08:56:00] Kimi translation failed: Kimi API returned 401
+[2026-02-09 08:56:00] ⚠ Using mock translation
+[2026-02-09 08:56:00] Translation completed
+[2026-02-09 08:56:00] Saved translation to translated_digest.json
+[2026-02-09 08:56:00] Step 4: Formatting and sending email...
+[2026-02-09 08:56:00] ❌ Error: 'SMTPEmailSender' object has no attribute 'save_html_preview'
+[2026-02-09 08:56:00] Traceback (most recent call last):
+  File "run_digest.py", line 247, in run
+    self.sender.save_html_preview(english_content, chinese_content, str(preview_file))
+AttributeError: 'SMTPEmailSender' object has no attribute 'save_html_preview'
+
+[2026-02-10 08:00:26] ============================================================
+[2026-02-10 08:00:26] Starting Executive News Digest Generation
+[2026-02-10 08:00:26] ============================================================
+[2026-02-10 08:00:26] Step 1: Fetching news from sources...
+[2026-02-10 08:00:27] Fetched 20 headlines
+[2026-02-10 08:00:27] Saved raw news to news_digest_raw.json
+[2026-02-10 08:00:27] Step 2: Generating executive commentary...
+[2026-02-10 08:00:27] Generating commentary for ray_dalio...
+[2026-02-10 08:00:27] Gemini Flash failed for ray_dalio: Gemini API returned 429: {
+  "error": {
+    "code": 429,
+    "message": "You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-3-flash\nPlease retry in 31.420567574s.",
+    "status": "RESOURCE_EXHAUSTED",
+    "details": [
+      {
+        "@type": "type.googleapis.com/google.rpc.Help",
+        "links": [
+          {
+            "description": "Learn more about Gemini API quotas",
+            "url": "https://ai.google.dev/gemini-api/docs/rate-limits"
+          }
+        ]
+      },
+      {
+        "@type": "type.googleapis.com/google.rpc.QuotaFailure",
+        "violations": [
+          {
+            "quotaMetric": "generativelanguage.googleapis.com/generate_content_free_tier_requests",
+            "quotaId": "GenerateRequestsPerDayPerProjectPerModel-FreeTier",
+            "quotaDimensions": {
+              "location": "global",
+              "model": "gemini-3-flash"
+            },
+            "quotaValue": "20"
+          }
+        ]
+      },
+      {
+        "@type": "type.googleapis.com/google.rpc.RetryInfo",
+        "retryDelay": "31s"
+      }
+    ]
+  }
+}
+
+[2026-02-10 08:00:28] Kimi fallback failed for ray_dalio: Kimi API returned 401
+[2026-02-10 08:00:28] ⚠ Using mock commentary for ray_dalio
+[2026-02-10 08:00:28] Generating commentary for elon_musk...
+[2026-02-10 08:00:28] Gemini Flash failed for elon_musk: Gemini API returned 429: {
+  "error": {
+    "code": 429,
+    "message": "You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-3-flash\nPlease retry in 29.91316935s.",
+    "status": "RESOURCE_EXHAUSTED",
+    "details": [
+      {
+        "@type": "type.googleapis.com/google.rpc.Help",
+        "links": [
+          {
+            "description": "Learn more about Gemini API quotas",
+            "url": "https://ai.google.dev/gemini-api/docs/rate-limits"
+          }
+        ]
+      },
+      {
+        "@type": "type.googleapis.com/google.rpc.QuotaFailure",
+        "violations": [
+          {
+            "quotaMetric": "generativelanguage.googleapis.com/generate_content_free_tier_requests",
+            "quotaId": "GenerateRequestsPerDayPerProjectPerModel-FreeTier",
+            "quotaDimensions": {
+              "location": "global",
+              "model": "gemini-3-flash"
+            },
+            "quotaValue": "20"
+          }
+        ]
+      },
+      {
+        "@type": "type.googleapis.com/google.rpc.RetryInfo",
+        "retryDelay": "29s"
+      }
+    ]
+  }
+}
+
+[2026-02-10 08:00:29] Kimi fallback failed for elon_musk: Kimi API returned 401
+[2026-02-10 08:00:29] ⚠ Using mock commentary for elon_musk
+[2026-02-10 08:00:29] Generating commentary for warren_buffett...
+[2026-02-10 08:00:29] Gemini Flash failed for warren_buffett: Gemini API returned 429: {
+  "error": {
+    "code": 429,
+    "message": "You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-3-flash\nPlease retry in 28.641292039s.",
+    "status": "RESOURCE_EXHAUSTED",
+    "details": [
+      {
+        "@type": "type.googleapis.com/google.rpc.Help",
+        "links": [
+          {
+            "description": "Learn more about Gemini API quotas",
+            "url": "https://ai.google.dev/gemini-api/docs/rate-limits"
+          }
+        ]
+      },
+      {
+        "@type": "type.googleapis.com/google.rpc.QuotaFailure",
+        "violations": [
+          {
+            "quotaMetric": "generativelanguage.googleapis.com/generate_content_free_tier_requests",
+            "quotaId": "GenerateRequestsPerDayPerProjectPerModel-FreeTier",
+            "quotaDimensions": {
+              "location": "global",
+              "model": "gemini-3-flash"
+            },
+            "quotaValue": "20"
+          }
+        ]
+      },
+      {
+        "@type": "type.googleapis.com/google.rpc.RetryInfo",
+        "retryDelay": "28s"
+      }
+    ]
+  }
+}
+
+[2026-02-10 08:00:31] Kimi fallback failed for warren_buffett: Kimi API returned 401
+[2026-02-10 08:00:31] ⚠ Using mock commentary for warren_buffett
+[2026-02-10 08:00:31] Generated commentary from all three executives
+[2026-02-10 08:00:31] Saved commentary to commentary_output.json
+[2026-02-10 08:00:31] Step 3: Translating to Simplified Chinese...
+[2026-02-10 08:00:31] Translating to Simplified Chinese...
+[2026-02-10 08:00:31] Gemini Flash translation failed: Gemini API returned 429: {
+  "error": {
+    "code": 429,
+    "message": "You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-3-flash\nPlease retry in 27.412932563s.",
+    "status": "RESOURCE_EXHAUSTED",
+    "details": [
+      {
+        "@type": "type.googleapis.com/google.rpc.Help",
+        "links": [
+          {
+            "description": "Learn more about Gemini API quotas",
+            "url": "https://ai.google.dev/gemini-api/docs/rate-limits"
+          }
+        ]
+      },
+      {
+        "@type": "type.googleapis.com/google.rpc.QuotaFailure",
+        "violations": [
+          {
+            "quotaMetric": "generativelanguage.googleapis.com/generate_content_free_tier_requests",
+            "quotaId": "GenerateRequestsPerDayPerProjectPerModel-FreeTier",
+            "quotaDimensions": {
+              "location": "global",
+              "model": "gemini-3-flash"
+            },
+            "quotaValue": "20"
+          }
+        ]
+      },
+      {
+        "@type": "type.googleapis.com/google.rpc.RetryInfo",
+        "retryDelay": "27s"
+      }
+    ]
+  }
+}
+
+[2026-02-10 08:00:32] Kimi translation failed: Kimi API returned 401
+[2026-02-10 08:00:32] ⚠ Using mock translation
+[2026-02-10 08:00:32] Translation completed
+[2026-02-10 08:00:32] Saved translation to translated_digest.json
+[2026-02-10 08:00:32] Step 4: Formatting and sending email...
+[2026-02-10 08:00:32] Saved HTML preview to digest_preview.html
+[2026-02-10 08:00:32] ✅ Email sent successfully!
+[2026-02-10 08:00:32] ============================================================
+[2026-02-10 08:00:32] Executive News Digest completed successfully!
+[2026-02-10 08:00:32] ============================================================
+[2026-02-11 08:00:25] ============================================================
+[2026-02-11 08:00:25] Starting Executive News Digest Generation
+[2026-02-11 08:00:25] ============================================================
+[2026-02-11 08:00:25] Step 1: Fetching news from sources...
+[2026-02-11 08:00:26] Fetched 20 headlines
+[2026-02-11 08:00:26] Saved raw news to news_digest_raw.json
+[2026-02-11 08:00:26] Step 2: Generating executive commentary...
+[2026-02-11 08:00:26] Generating commentary for ray_dalio...
+[2026-02-11 08:00:27] Gemini Flash failed for ray_dalio: Gemini API returned 429: {
+  "error": {
+    "code": 429,
+    "message": "You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-3-flash\nPlease retry in 31.807853693s.",
+    "status": "RESOURCE_EXHAUSTED",
+    "details": [
+      {
+        "@type": "type.googleapis.com/google.rpc.Help",
+        "links": [
+          {
+            "description": "Learn more about Gemini API quotas",
+            "url": "https://ai.google.dev/gemini-api/docs/rate-limits"
+          }
+        ]
+      },
+      {
+        "@type": "type.googleapis.com/google.rpc.QuotaFailure",
+        "violations": [
+          {
+            "quotaMetric": "generativelanguage.googleapis.com/generate_content_free_tier_requests",
+            "quotaId": "GenerateRequestsPerDayPerProjectPerModel-FreeTier",
+            "quotaDimensions": {
+              "location": "global",
+              "model": "gemini-3-flash"
+            },
+            "quotaValue": "20"
+          }
+        ]
+      },
+      {
+        "@type": "type.googleapis.com/google.rpc.RetryInfo",
+        "retryDelay": "31s"
+      }
+    ]
+  }
+}
+
+[2026-02-11 08:00:28] Kimi fallback failed for ray_dalio: Kimi API returned 401
+[2026-02-11 08:00:28] ⚠ Using mock commentary for ray_dalio
+[2026-02-11 08:00:28] Generating commentary for elon_musk...
+[2026-02-11 08:00:28] Gemini Flash failed for elon_musk: Gemini API returned 429: {
+  "error": {
+    "code": 429,
+    "message": "You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-3-flash\nPlease retry in 29.880777899s.",
+    "status": "RESOURCE_EXHAUSTED",
+    "details": [
+      {
+        "@type": "type.googleapis.com/google.rpc.Help",
+        "links": [
+          {
+            "description": "Learn more about Gemini API quotas",
+            "url": "https://ai.google.dev/gemini-api/docs/rate-limits"
+          }
+        ]
+      },
+      {
+        "@type": "type.googleapis.com/google.rpc.QuotaFailure",
+        "violations": [
+          {
+            "quotaMetric": "generativelanguage.googleapis.com/generate_content_free_tier_requests",
+            "quotaId": "GenerateRequestsPerDayPerProjectPerModel-FreeTier",
+            "quotaDimensions": {
+              "model": "gemini-3-flash",
+              "location": "global"
+            },
+            "quotaValue": "20"
+          }
+        ]
+      },
+      {
+        "@type": "type.googleapis.com/google.rpc.RetryInfo",
+        "retryDelay": "29s"
+      }
+    ]
+  }
+}
+
+[2026-02-11 08:00:30] Kimi fallback failed for elon_musk: Kimi API returned 401
+[2026-02-11 08:00:30] ⚠ Using mock commentary for elon_musk
+[2026-02-11 08:00:30] Generating commentary for warren_buffett...
+[2026-02-11 08:00:30] Gemini Flash failed for warren_buffett: Gemini API returned 429: {
+  "error": {
+    "code": 429,
+    "message": "You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-3-flash\nPlease retry in 28.444021046s.",
+    "status": "RESOURCE_EXHAUSTED",
+    "details": [
+      {
+        "@type": "type.googleapis.com/google.rpc.Help",
+        "links": [
+          {
+            "description": "Learn more about Gemini API quotas",
+            "url": "https://ai.google.dev/gemini-api/docs/rate-limits"
+          }
+        ]
+      },
+      {
+        "@type": "type.googleapis.com/google.rpc.QuotaFailure",
+        "violations": [
+          {
+            "quotaMetric": "generativelanguage.googleapis.com/generate_content_free_tier_requests",
+            "quotaId": "GenerateRequestsPerDayPerProjectPerModel-FreeTier",
+            "quotaDimensions": {
+              "location": "global",
+              "model": "gemini-3-flash"
+            },
+            "quotaValue": "20"
+          }
+        ]
+      },
+      {
+        "@type": "type.googleapis.com/google.rpc.RetryInfo",
+        "retryDelay": "28s"
+      }
+    ]
+  }
+}
+
+[2026-02-11 08:00:31] Kimi fallback failed for warren_buffett: Kimi API returned 401
+[2026-02-11 08:00:31] ⚠ Using mock commentary for warren_buffett
+[2026-02-11 08:00:31] Generated commentary from all three executives
+[2026-02-11 08:00:31] Saved commentary to commentary_output.json
+[2026-02-11 08:00:31] Step 3: Translating to Simplified Chinese...
+[2026-02-11 08:00:31] Translating to Simplified Chinese...
+[2026-02-11 08:00:31] Gemini Flash translation failed: Gemini API returned 429: {
+  "error": {
+    "code": 429,
+    "message": "You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-3-flash\nPlease retry in 27.11774257s.",
+    "status": "RESOURCE_EXHAUSTED",
+    "details": [
+      {
+        "@type": "type.googleapis.com/google.rpc.Help",
+        "links": [
+          {
+            "description": "Learn more about Gemini API quotas",
+            "url": "https://ai.google.dev/gemini-api/docs/rate-limits"
+          }
+        ]
+      },
+      {
+        "@type": "type.googleapis.com/google.rpc.QuotaFailure",
+        "violations": [
+          {
+            "quotaMetric": "generativelanguage.googleapis.com/generate_content_free_tier_requests",
+            "quotaId": "GenerateRequestsPerDayPerProjectPerModel-FreeTier",
+            "quotaDimensions": {
+              "location": "global",
+              "model": "gemini-3-flash"
+            },
+            "quotaValue": "20"
+          }
+        ]
+      },
+      {
+        "@type": "type.googleapis.com/google.rpc.RetryInfo",
+        "retryDelay": "27s"
+      }
+    ]
+  }
+}
+
+[2026-02-11 08:00:33] Kimi translation failed: Kimi API returned 401
+[2026-02-11 08:00:33] ⚠ Using mock translation
+[2026-02-11 08:00:33] Translation completed
+[2026-02-11 08:00:33] Saved translation to translated_digest.json
+[2026-02-11 08:00:33] Step 4: Formatting and sending email...
+[2026-02-11 08:00:33] Saved HTML preview to digest_preview.html
+[2026-02-11 08:00:33] ✅ Email sent successfully!
+[2026-02-11 08:00:33] ============================================================
+[2026-02-11 08:00:33] Executive News Digest completed successfully!
+[2026-02-11 08:00:33] ============================================================
+[2026-02-12 08:00:13] ============================================================
+[2026-02-12 08:00:13] Starting Executive News Digest Generation
+[2026-02-12 08:00:13] ============================================================
+[2026-02-12 08:00:13] Step 1: Fetching news from sources...
+[2026-02-12 08:00:14] Fetched 20 headlines
+[2026-02-12 08:00:14] Saved raw news to news_digest_raw.json
+[2026-02-12 08:00:14] Step 2: Generating executive commentary...
+[2026-02-12 08:00:14] Generating commentary for ray_dalio...
+[2026-02-12 08:00:14] Gemini Flash failed for ray_dalio: Gemini API returned 429: {
+  "error": {
+    "code": 429,
+    "message": "You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-3-flash\nPlease retry in 45.451987659s.",
+    "status": "RESOURCE_EXHAUSTED",
+    "details": [
+      {
+        "@type": "type.googleapis.com/google.rpc.Help",
+        "links": [
+          {
+            "description": "Learn more about Gemini API quotas",
+            "url": "https://ai.google.dev/gemini-api/docs/rate-limits"
+          }
+        ]
+      },
+      {
+        "@type": "type.googleapis.com/google.rpc.QuotaFailure",
+        "violations": [
+          {
+            "quotaMetric": "generativelanguage.googleapis.com/generate_content_free_tier_requests",
+            "quotaId": "GenerateRequestsPerDayPerProjectPerModel-FreeTier",
+            "quotaDimensions": {
+              "model": "gemini-3-flash",
+              "location": "global"
+            },
+            "quotaValue": "20"
+          }
+        ]
+      },
+      {
+        "@type": "type.googleapis.com/google.rpc.RetryInfo",
+        "retryDelay": "45s"
+      }
+    ]
+  }
+}
+
+[2026-02-12 08:00:15] Kimi fallback failed for ray_dalio: Kimi API returned 401
+[2026-02-12 08:00:15] ⚠ Using mock commentary for ray_dalio
+[2026-02-12 08:00:15] Generating commentary for elon_musk...
+[2026-02-12 08:00:16] Gemini Flash failed for elon_musk: Gemini API returned 429: {
+  "error": {
+    "code": 429,
+    "message": "You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-3-flash\nPlease retry in 43.910361679s.",
+    "status": "RESOURCE_EXHAUSTED",
+    "details": [
+      {
+        "@type": "type.googleapis.com/google.rpc.Help",
+        "links": [
+          {
+            "description": "Learn more about Gemini API quotas",
+            "url": "https://ai.google.dev/gemini-api/docs/rate-limits"
+          }
+        ]
+      },
+      {
+        "@type": "type.googleapis.com/google.rpc.QuotaFailure",
+        "violations": [
+          {
+            "quotaMetric": "generativelanguage.googleapis.com/generate_content_free_tier_requests",
+            "quotaId": "GenerateRequestsPerDayPerProjectPerModel-FreeTier",
+            "quotaDimensions": {
+              "location": "global",
+              "model": "gemini-3-flash"
+            },
+            "quotaValue": "20"
+          }
+        ]
+      },
+      {
+        "@type": "type.googleapis.com/google.rpc.RetryInfo",
+        "retryDelay": "43s"
+      }
+    ]
+  }
+}
+
+[2026-02-12 08:00:17] Kimi fallback failed for elon_musk: Kimi API returned 401
+[2026-02-12 08:00:17] ⚠ Using mock commentary for elon_musk
+[2026-02-12 08:00:17] Generating commentary for warren_buffett...
+[2026-02-12 08:00:17] Gemini Flash failed for warren_buffett: Gemini API returned 429: {
+  "error": {
+    "code": 429,
+    "message": "You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-3-flash\nPlease retry in 42.640494477s.",
+    "status": "RESOURCE_EXHAUSTED",
+    "details": [
+      {
+        "@type": "type.googleapis.com/google.rpc.Help",
+        "links": [
+          {
+            "description": "Learn more about Gemini API quotas",
+            "url": "https://ai.google.dev/gemini-api/docs/rate-limits"
+          }
+        ]
+      },
+      {
+        "@type": "type.googleapis.com/google.rpc.QuotaFailure",
+        "violations": [
+          {
+            "quotaMetric": "generativelanguage.googleapis.com/generate_content_free_tier_requests",
+            "quotaId": "GenerateRequestsPerDayPerProjectPerModel-FreeTier",
+            "quotaDimensions": {
+              "location": "global",
+              "model": "gemini-3-flash"
+            },
+            "quotaValue": "20"
+          }
+        ]
+      },
+      {
+        "@type": "type.googleapis.com/google.rpc.RetryInfo",
+        "retryDelay": "42s"
+      }
+    ]
+  }
+}
+
+[2026-02-12 08:00:18] Kimi fallback failed for warren_buffett: Kimi API returned 401
+[2026-02-12 08:00:18] ⚠ Using mock commentary for warren_buffett
+[2026-02-12 08:00:18] Generated commentary from all three executives
+[2026-02-12 08:00:18] Saved commentary to commentary_output.json
+[2026-02-12 08:00:18] Step 3: Translating to Simplified Chinese...
+[2026-02-12 08:00:18] Translating to Simplified Chinese...
+[2026-02-12 08:00:18] Gemini Flash translation failed: Gemini API returned 429: {
+  "error": {
+    "code": 429,
+    "message": "You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-3-flash\nPlease retry in 41.415758281s.",
+    "status": "RESOURCE_EXHAUSTED",
+    "details": [
+      {
+        "@type": "type.googleapis.com/google.rpc.Help",
+        "links": [
+          {
+            "description": "Learn more about Gemini API quotas",
+            "url": "https://ai.google.dev/gemini-api/docs/rate-limits"
+          }
+        ]
+      },
+      {
+        "@type": "type.googleapis.com/google.rpc.QuotaFailure",
+        "violations": [
+          {
+            "quotaMetric": "generativelanguage.googleapis.com/generate_content_free_tier_requests",
+            "quotaId": "GenerateRequestsPerDayPerProjectPerModel-FreeTier",
+            "quotaDimensions": {
+              "location": "global",
+              "model": "gemini-3-flash"
+            },
+            "quotaValue": "20"
+          }
+        ]
+      },
+      {
+        "@type": "type.googleapis.com/google.rpc.RetryInfo",
+        "retryDelay": "41s"
+      }
+    ]
+  }
+}
+
+[2026-02-12 08:00:20] Kimi translation failed: Kimi API returned 401
+[2026-02-12 08:00:20] ⚠ Using mock translation
+[2026-02-12 08:00:20] Translation completed
+[2026-02-12 08:00:20] Saved translation to translated_digest.json
+[2026-02-12 08:00:20] Step 4: Formatting and sending email...
+[2026-02-12 08:00:20] Saved HTML preview to digest_preview.html
+[2026-02-12 08:00:20] ✅ Email sent successfully!
+[2026-02-12 08:00:20] ============================================================
+[2026-02-12 08:00:20] Executive News Digest completed successfully!
+[2026-02-12 08:00:20] ============================================================
