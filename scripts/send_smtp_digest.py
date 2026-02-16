@@ -7,6 +7,7 @@ Uses Gmail SMTP directly
 import smtplib
 import json
 import ssl
+import os
 from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
 from datetime import datetime
@@ -19,8 +20,11 @@ def send_smtp_email(recipients: str, subject: str, html_body: str) -> bool:
         smtp_server = "smtp.gmail.com"
         smtp_port = 587
         sender_email = "wotb.spt@gmail.com"
-        # Note: This should be an app password, not regular password
-        app_password = "kaho mwqy nwyx sorq"
+        # Get password from environment variable
+        app_password = os.environ.get('GMAIL_SMTP_PASSWORD')
+        if not app_password:
+            print("❌ Error: GMAIL_SMTP_PASSWORD environment variable not set")
+            return False
         
         # Create message
         message = MIMEMultipart("alternative")
