@@ -7,6 +7,11 @@ Sends formatted digest via Gmail using GOG CLI
 import json
 import subprocess
 import sys
+import os
+import smtplib
+import ssl
+from email.mime.text import MIMEText
+from email.mime.multipart import MIMEMultipart
 from datetime import datetime
 from typing import Dict, List
 
@@ -273,41 +278,69 @@ class EmailSender:
             # Prepare email subject
             subject = f"📰 Executive News Digest - {datetime.now().strftime('%b %d, %Y')}"
             
-            # Send via GOG CLI (using --body with HTML)
+            # Send via GOG CLI (using --body-html for HTML emails)
             # Note: This assumes GOG is configured and GOG_ACCOUNT is set
+            account = os.environ.get('GOG_ACCOUNT', 'wotb.spt@gmail.com')
+            
             cmd = [
                 "gog", "gmail", "send",
+                "--account", account,
                 "--to", self.recipient,
                 "--subject", subject,
-                "--body", html_body,
-                "--html"
+                "--body-html", html_body
             ]
             
             print(f"Sending email to {self.recipient}...")
             result = subprocess.run(cmd, capture_output=True, text=True)
             
             if result.returncode == 0:
-                print("✅ Email sent successfully!")
+                print("✅ Email sent successfully via GOG!")
                 return True
             else:
-                print(f"❌ Error sending email: {result.stderr}")
-                # Try without --html flag
-                cmd = [
-                    "gog", "gmail", "send",
-                    "--to", self.recipient,
-                    "--subject", subject,
-                    "--body", html_body
-                ]
-                result = subprocess.run(cmd, capture_output=True, text=True)
-                if result.returncode == 0:
-                    print("✅ Email sent successfully (plain mode)!")
-                    return True
-                else:
-                    print(f"❌ Error sending email: {result.stderr}")
-                    return False
+                print(f"❌ GOG email failed: {result.stderr}")
+                # Fallback to SMTP
+                return self._send_via_smtp(subject, html_body)
                 
         except Exception as e:
             print(f"❌ Error: {e}")
+            return False
+    
+    def _send_via_smtp(self, subject: str, html_body: str) -> bool:
+        """Fallback to send email via SMTP if GOG fails"""
+        try:
+            sender_email = os.environ.get('GMAIL_EMAIL', 'wotb.spt@gmail.com')
+            app_password = os.environ.get('GMAIL_SMTP_PASSWORD')
+            
+            if not app_password:
+                print("❌ SMTP fallback failed: GMAIL_SMTP_PASSWORD not set")
+                return False
+            
+            recipients = [email.strip() for email in self.recipient.split(',')]
+            
+            message = MIMEMultipart("alternative")
+            message["Subject"] = subject
+            message["From"] = sender_email
+            message["To"] = ", ".join(recipients)
+            
+            html_part = MIMEText(html_body, "html")
+            message.attach(html_part)
+            
+            context = ssl.create_default_context()
+            context.check_hostname = False
+            context.verify_mode = ssl.CERT_NONE
+            
+            with smtplib.SMTP("smtp.gmail.com", 587) as server:
+                server.ehlo()
+                server.starttls(context=context)
+                server.ehlo()
+                server.login(sender_email, app_password)
+                server.sendmail(sender_email, recipients, message.as_string())
+            
+            print("✅ Email sent successfully via SMTP fallback!")
+            return True
+            
+        except Exception as e:
+            print(f"❌ SMTP fallback failed: {e}")
             return False
     
     def save_html_preview(self, english_content: Dict, chinese_content: Dict, filename="digest_preview.html"):
